@@ -13,7 +13,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Replacement.ClearFormatting
     
     With Selection.Find
-        .Text = "¡"
+        .Text = "√Å"
         .Replacement.Text = "A"
         .Forward = True
         .Wrap = wdFindContinue
@@ -27,7 +27,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
         With Selection.Find
-        .Text = "¢"
+        .Text = "¬¢"
         .Replacement.Text = "A"
         .Forward = True
         .Wrap = wdFindContinue
@@ -41,7 +41,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "¬"
+        .Text = "√Ç"
         .Replacement.Text = "B"
         .Forward = True
         .Wrap = wdFindContinue
@@ -56,7 +56,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     
     
     With Selection.Find
-        .Text = "√"
+        .Text = "√É"
         .Replacement.Text = "~G"
         .Forward = True
         .Wrap = wdFindContinue
@@ -70,7 +70,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "ƒ"
+        .Text = "√Ñ"
         .Replacement.Text = "~D"
         .Forward = True
         .Wrap = wdFindContinue
@@ -84,7 +84,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "≈"
+        .Text = "√Ö"
         .Replacement.Text = "E"
         .Forward = True
         .Wrap = wdFindContinue
@@ -98,7 +98,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "∏"
+        .Text = "¬∏"
         .Replacement.Text = "E"
         .Forward = True
         .Wrap = wdFindContinue
@@ -112,7 +112,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "∆"
+        .Text = "√Ü"
         .Replacement.Text = "Z"
         .Forward = True
         .Wrap = wdFindContinue
@@ -126,7 +126,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "«"
+        .Text = "√á"
         .Replacement.Text = "H"
         .Forward = True
         .Wrap = wdFindContinue
@@ -140,7 +140,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
      With Selection.Find
-        .Text = "π"
+        .Text = "¬π"
         .Replacement.Text = "H"
         .Forward = True
         .Wrap = wdFindContinue
@@ -154,7 +154,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "»"
+        .Text = "√à"
         .Replacement.Text = "~U"
         .Forward = True
         .Wrap = wdFindContinue
@@ -168,7 +168,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "…"
+        .Text = "√â"
         .Replacement.Text = "I"
         .Forward = True
         .Wrap = wdFindContinue
@@ -182,7 +182,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "∫"
+        .Text = "¬∫"
         .Replacement.Text = "I"
         .Forward = True
         .Wrap = wdFindContinue
@@ -196,7 +196,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "⁄"
+        .Text = "√ö"
         .Replacement.Text = "I"
         .Forward = True
         .Wrap = wdFindContinue
@@ -210,7 +210,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = " "
+        .Text = "√ä"
         .Replacement.Text = "K"
         .Forward = True
         .Wrap = wdFindContinue
@@ -224,7 +224,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "À"
+        .Text = "√ã"
         .Replacement.Text = "~L"
         .Forward = True
         .Wrap = wdFindContinue
@@ -238,7 +238,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "Ã"
+        .Text = "√å"
         .Replacement.Text = "M"
         .Forward = True
         .Wrap = wdFindContinue
@@ -252,7 +252,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "Õ"
+        .Text = "√ç"
         .Replacement.Text = "N"
         .Forward = True
         .Wrap = wdFindContinue
@@ -266,7 +266,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "Œ"
+        .Text = "√é"
         .Replacement.Text = "~J"
         .Forward = True
         .Wrap = wdFindContinue
@@ -280,7 +280,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "œ"
+        .Text = "√è"
         .Replacement.Text = "O"
         .Forward = True
         .Wrap = wdFindContinue
@@ -294,7 +294,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "º"
+        .Text = "¬º"
         .Replacement.Text = "O"
         .Forward = True
         .Wrap = wdFindContinue
@@ -308,7 +308,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "–"
+        .Text = "√ê"
         .Replacement.Text = "~P"
         .Forward = True
         .Wrap = wdFindContinue
@@ -322,7 +322,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "—"
+        .Text = "√ë"
         .Replacement.Text = "P"
         .Forward = True
         .Wrap = wdFindContinue
@@ -337,7 +337,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     
     
     With Selection.Find
-        .Text = "”"
+        .Text = "√ì"
         .Replacement.Text = "~S"
         .Forward = True
         .Wrap = wdFindContinue
@@ -351,7 +351,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "‘"
+        .Text = "√î"
         .Replacement.Text = "T"
         .Forward = True
         .Wrap = wdFindContinue
@@ -365,7 +365,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "’"
+        .Text = "√ï"
         .Replacement.Text = "Y"
         .Forward = True
         .Wrap = wdFindContinue
@@ -379,7 +379,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "æ"
+        .Text = "¬æ"
         .Replacement.Text = "Y"
         .Forward = True
         .Wrap = wdFindContinue
@@ -393,7 +393,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "÷"
+        .Text = "√ñ"
         .Replacement.Text = "~F"
         .Forward = True
         .Wrap = wdFindContinue
@@ -407,7 +407,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "◊"
+        .Text = "√ó"
         .Replacement.Text = "X"
         .Forward = True
         .Wrap = wdFindContinue
@@ -421,7 +421,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "ÿ"
+        .Text = "√ò"
         .Replacement.Text = "~C"
         .Forward = True
         .Wrap = wdFindContinue
@@ -435,7 +435,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
-        .Text = "Ÿ"
+        .Text = "√ô"
         .Replacement.Text = "~V"
         .Forward = True
         .Wrap = wdFindContinue
@@ -449,7 +449,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
       With Selection.Find
-        .Text = "ø"
+        .Text = "¬ø"
         .Replacement.Text = "~V"
         .Forward = True
         .Wrap = wdFindContinue
@@ -477,7 +477,7 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Find.Execute Replace:=wdReplaceAll
     
     ChangeFileOpenDirectory "C:\Users\savas\Desktop\"
-    ActiveDocument.SaveAs2 FileName:="output.txt", FileFormat:=wdFormatText, _
+    ActiveDocument.SaveAs2 FileName:="text.txt", FileFormat:=wdFormatText, _
         LockComments:=False, Password:="", AddToRecentFiles:=True, WritePassword _
         :="", ReadOnlyRecommended:=False, EmbedTrueTypeFonts:=False, _
         SaveNativePictureFormat:=False, SaveFormsData:=False, SaveAsAOCELetter:= _
