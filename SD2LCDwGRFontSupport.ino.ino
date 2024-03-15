@@ -218,7 +218,7 @@ void setup()
 
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
-  File dataFile = SD.open("DEMO.TXT");
+  File dataFile = SD.open("text.txt");
   lcd.clear();
   lcd.print("  Reading File ...  ");
   delay (2000);
