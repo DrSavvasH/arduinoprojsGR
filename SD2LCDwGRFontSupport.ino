@@ -1,5 +1,5 @@
 /*
-  LiquidCrystal Library - Greek Enable for Arduino LCD - by Savvas Hirides
+  LiquidCrystal Library - Greek Enable for Arduino LCD - by Savvas C. Hirides, Athens, Greece, version 16, March 2024
 
  Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
  library works with all LCD displays that are compatible with the
@@ -23,7 +23,7 @@
  * ends to +5V and ground
  * wiper to LCD VO pin (pin 3)
 
- * Pins 10,11,12 dedicated to the SD reader / VCC (only 5V worked in my case) and GROUND connected accordingly
+ * Pins 10(CS),11(MOSI),12(MISO),13(SCK) dedicated to the SD reader / VCC (only 5V worked in my case) and GROUND connected accordingly
 
  Library originally added 18 Apr 2008
  by David A. Mellis
@@ -204,9 +204,10 @@ void setup()
   lcd.print("from SD");
   lcd.setCursor(7, 2);
   lcd.print("by");
-  lcd.setCursor(1, 3);
-  lcd.print(" Savas Hirides 2024");
+  lcd.setCursor(0, 3);
+  lcd.print("Savvas Hirides 2024");
   delay(1000);
+ 
   //Serial.print("Initializing SD card...");
 
   // see if the card is present and can be initialized:
@@ -220,7 +221,8 @@ void setup()
   // so you have to close this one before opening another.
   File dataFile = SD.open("text.txt");
   lcd.clear();
-  lcd.print("  Reading File ...  ");
+  lcd.setCursor(0, 0);
+  lcd.print("Reading File ...  ");
   delay (2000);
   // if the file is available, raed it:
   on4 = 0;
@@ -229,26 +231,31 @@ void setup()
   on9 = 0;
   int GrMode = 0;
   if (dataFile)
-      lcd.print(" End Of File   ");
+  lcd.setCursor(0, 1);
+      lcd.print("End Of File   ");
       delay(500);
       lcd.clear();
+
   {
     while (dataFile.available())
     { 
     z = char(dataFile.read()); 
-   
+    if (z == "|") {yy++;xx = 0;
+                   GrMode = 1;
+                  if (yy > 3) {lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}}
+                  
     if (z == "~") {GrMode = 1;}
     if (GrMode == 0){     
                   lcd.setCursor(xx, yy);
                   lcd.print (z);
                   xx++;
                   if (xx == 20) {xx = 0; yy++;}
-                  if (yy > 3) {lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}
+                  if (yy > 3) {delay(200);lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}
                   delay (100);//}
                   }
                   //delay(150);
     //}//endwhile datafile available
- 
+
     if ((GrMode == 1) && (z == "G")) {
      lcd.setCursor(xx, yy);
      lcd.print("\x08");
@@ -262,7 +269,7 @@ void setup()
     if ((GrMode == 1) && (z == "U")) {
     lcd.setCursor(xx, yy);
     lcd.print("\x02");
-    }
+                    }
 
     if ((GrMode == 1) && ( z == "L")) {
     lcd.setCursor(xx, yy);
@@ -313,7 +320,7 @@ void setup()
 
     if ((GrMode == 1) && !(z == "~")){xx++;GrMode = 0;}
     if (xx == 20) {xx = 0; yy++;}
-    if (yy > 3) {lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}
+    if (yy > 3) {delay(200);lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0; }
     }
     dataFile.close();
  //while (strindx < z.length());delay (1000);
@@ -321,5 +328,3 @@ void setup()
 //end of Setup
 }
 void loop() {}
-
-
