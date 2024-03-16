@@ -1,8 +1,6 @@
-Attribute VB_Name = "NewMacros"
 Sub ArduinoPreparation()
-Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.ArduinoPreparation"
 '
-' ArduinoPreparation Macro
+' ArduinoPreparation Macro - VBA by Savvas C. Hirides, Athens, Greece. Version 16, March 2024
 '
 '
     Selection.PasteAndFormat (wdFormatPlainText)
@@ -11,6 +9,20 @@ Attribute ArduinoPreparation.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Ardu
     Selection.Range.Case = wdUpperCase
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
+    
+    With Selection.Find
+        .Text = "^p"
+        .Replacement.Text = "|"
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
     
     With Selection.Find
         .Text = "Á"
