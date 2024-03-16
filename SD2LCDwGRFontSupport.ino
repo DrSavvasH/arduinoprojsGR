@@ -1,6 +1,6 @@
 /*
   LiquidCrystal Library - Greek Enable for Arduino LCD - by Savvas C. Hirides, Athens, Greece, version 16, March 2024
-
+  
  Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
  library works with all LCD displays that are compatible with the
  Hitachi HD44780 driver. There are many of them out there, and you
@@ -186,7 +186,10 @@ void setup()
   lcd.createChar(7, fi);
   //lcd.createChar(9, psi);
   //lcd.createChar(10, omega);
-  lcd.begin(20, 4);
+
+//end of Setup
+}
+void loop() {  lcd.begin(20, 4);
   lcd.home();
    // Open serial communications and wait for port to open:
   //Serial.begin(9600);
@@ -240,7 +243,8 @@ void setup()
     while (dataFile.available())
     { 
     z = char(dataFile.read()); 
-    if (z == "|") {yy++;xx = 0;
+    if (z == "|") {yy++;
+                  xx = -1;
                    GrMode = 1;
                   if (yy > 3) {lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}}
                   
@@ -282,6 +286,7 @@ void setup()
     else {on4 = 1;}
     lcd.setCursor(xx, yy);
     lcd.print("\x04");
+    delay(100);
     }
 
     if ((GrMode == 1) && (z == "P")) {
@@ -300,6 +305,7 @@ void setup()
     else {on7 = 1;}
     lcd.setCursor(xx, yy);
     lcd.print("\x07"); 
+     delay(100);
     }
   
     if ((GrMode == 1) && (z == "C")) {
@@ -308,6 +314,7 @@ void setup()
      else {on8 = 1;}
     lcd.setCursor(xx, yy);
      lcd.print("\x04");
+      delay(100);
     }
 
     if ((GrMode == 1) && (z == "V")) {
@@ -316,6 +323,7 @@ void setup()
     else {on9 = 1;}
     lcd.setCursor(xx, yy);
     lcd.print("\x07");
+     delay(100);
     }
 
     if ((GrMode == 1) && !(z == "~")){xx++;GrMode = 0;}
@@ -324,7 +332,4 @@ void setup()
     }
     dataFile.close();
  //while (strindx < z.length());delay (1000);
-  } 
-//end of Setup
-}
-void loop() {}
+  } }
