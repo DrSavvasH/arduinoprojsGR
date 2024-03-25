@@ -1,5 +1,5 @@
 /*
- FlashCards study aid tool / LiquidCrystal Library - Greek Enable for Arduino LCD - by Savvas Hirides
+ FlashCards study aid tool / LiquidCrystal Library - Greek Enable for Arduino MEGA with I2C LCD - by Savvas Hirides
  * I2C PINS to 20 (SDA to SDA) and 21 (SCL to SCL). 5V and GRND.
  * CS to Pin 53,(MOSI to 51),(MISO to 50),(SCK to 52) dedicated to the SD reader / VCC (only 5V worked in my case) and GROUND connected accordingly
  Part of this code is in the public domain.
