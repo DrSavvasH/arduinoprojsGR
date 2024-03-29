@@ -1,6 +1,6 @@
-Sub ArduinoPreparation()
+Sub ArduinoPreparationENGRword()
 '
-' ArduinoPreparation Macro - VBA by Savvas C. Hirides, Athens, Greece. Version 16, March 2024
+' Preparation of any text for Arduino LCD with Custom Greek Characters 
 '
 '
     Selection.PasteAndFormat (wdFormatPlainText)
@@ -9,10 +9,10 @@ Sub ArduinoPreparation()
     Selection.Range.Case = wdUpperCase
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
-    
-    With Selection.Find
-        .Text = "^p"
-        .Replacement.Text = "|"
+        
+     With Selection.Find
+        .Text = "’"
+        .Replacement.Text = "'"
         .Forward = True
         .Wrap = wdFindContinue
         .Format = False
