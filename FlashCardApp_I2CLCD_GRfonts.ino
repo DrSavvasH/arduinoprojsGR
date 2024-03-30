@@ -1,8 +1,8 @@
-*/
+/*
  * FlashCards study aid tool / for arduino MEGA with I2C LiquidCrystalDisplay (with Custom Greek Fonts) and SD Card reader - by Savvas Hirides (version 30,March 2024)
  * I2C PINS to 20 (SDA to SDA) and 21 (SCL to SCL). 5V and GRND.
  * CS to Pin 53,(MOSI to 51),(MISO to 50),(SCK to 52) dedicated to the SD reader / VCC (only 5V worked in my case) and GROUND connected accordingly
-*/
+/*
 // include the library code:
 //needed for SD and LCD
 #include <SPI.h>
