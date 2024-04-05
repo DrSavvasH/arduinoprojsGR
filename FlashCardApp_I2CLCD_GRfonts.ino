@@ -1,14 +1,14 @@
-/*
- * FlashCards study aid tool / for arduino MEGA with I2C LiquidCrystalDisplay (with Custom Greek Fonts) and SD Card reader - by Savvas Hirides (version 30,March 2024)
- * I2C PINS to 20 (SDA to SDA) and 21 (SCL to SCL). 5V and GRND.
- * CS to Pin 53,(MOSI to 51),(MISO to 50),(SCK to 52) dedicated to the SD reader / VCC (only 5V worked in my case) and GROUND connected accordingly
-/*
+//*
+//* FlashCards study aid tool / for arduino MEGA with I2C LiquidCrystalDisplay (with Custom Greek Fonts) and SD Card reader - by Savvas Hirides (version 30,March 2024)
+//* I2C PINS to 20 (SDA to SDA) and 21 (SCL to SCL). 5V and GRND.
+//* CS to Pin 53,(MOSI to 51),(MISO to 50),(SCK to 52) dedicated to the SD reader / VCC (only 5V worked in my case) and GROUND connected accordingly
+//*
 // include the library code:
 //needed for SD and LCD
 #include <SPI.h>
 #include <SD.h>
 #include <LiquidCrystal_I2C.h>
-LiquidCrystal_I2C lcd(0x27,16,2); 
+LiquidCrystal_I2C lcd(0x27,20,4); 
 const int chipSelect = 53;
 // Missing Greek Character
 byte delta[] = {
@@ -120,10 +120,10 @@ byte omega[] = {
   int on9 = 0; 
 String z ;
 int GrMode = 0;
- 
+int cardnum = 0;
 void setup() 
 {
-  lcd.begin(20, 4);
+  //lcd.begin(20, 4);
   lcd.init();
   lcd.backlight();
   lcd.clear();
@@ -136,7 +136,6 @@ void setup()
   lcd.createChar(6, sigma);
   lcd.createChar(7, fi);
   // Create Custom Characters
-
   //lcd.createChar(9, psi);
   //lcd.createChar(10, omega);
   lcd.setCursor(0, 0); //move along and down
@@ -149,7 +148,7 @@ void setup()
   lcd.print("\x01");
   lcd.print("H");
   lcd.print("\x06");
-  delay(1000);
+  delay(2000);
     if (!SD.begin(chipSelect)) {
     Serial.println("Card failed, or not present");
     return;}
@@ -160,10 +159,26 @@ void setup()
     lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Reading File ...  ");
-  delay (1000);
+  File dataF = SD.open("text.txt");
+  // if the file is available, raed it:
+  if (dataF)
+  {
+    while (dataF.available())
+    { 
+    z = String(char(dataF.read()));
+    if (z == "{") {cardnum++;}
+    }
+    dataF.close();
+  }
     lcd.setCursor(0, 1);
       lcd.print("End Of File   ");
-      delay(1000);
+      delay (500);
+      lcd.setCursor(0, 2);
+      lcd.print("Flashcards found : ");
+      delay (500);
+      lcd.setCursor(0, 3);
+      lcd.print(cardnum);
+      delay(3000);
       lcd.clear();
 }
 
@@ -181,7 +196,7 @@ void loop() {
                   lcd.print(z);
                   xx++;
                   if (xx == 20) {xx = 0; yy++;}
-                  if (yy > 3) {delay(100);lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}
+                  if (yy > 4) {delay(100);lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}
                   delay(150);
                   }
     if (GrMode == 1){
@@ -253,7 +268,7 @@ void loop() {
                         GrMode = 0;
                         xx++;
                         if (xx == 20) {xx = 0; yy++;}
-                        if (yy > 3) {delay(100);lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}
+                        if (yy > 4) {delay(100);lcd.clear();xx = 0; yy = 0;on4 = 0;on7 = 0;on8 = 0;on9 = 0;}
                         delay(150);}
     if (z == "~") { 
                     GrMode = 1; }
